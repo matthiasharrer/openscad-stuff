@@ -5,7 +5,7 @@ depth = 50;
 height = 60;
 inset = 2;
 
-bottom = 1.2;
+bottom = 1.6;
 wall = 0.8;
 
 edge_radius = 3;
@@ -52,7 +52,7 @@ module container() {
     difference() {
         base(width, depth, inset, edge_radius);
         difference() {
-            base(width - 2 * wall, depth - 2 * wall, inset, edge_radius);
+            base(width - 2 * wall, depth - 2 * wall, inset, edge_radius - wall);
             cube([width, depth, bottom], true);
         }
     }
